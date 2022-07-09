@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "cfd8c4fd-8ef9-478a-b759-042a4d752ec5",
+		"name": "bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Pepe\",\r\n    \"lastName\": \"Perez\",\r\n    \"password\": \"A,12345678\",\r\n    \"age\": 50,\r\n    \"balance\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Pepe\",\r\n    \"lastName\": \"Perez\",\r\n    \"password\": \"A,12345678\",\r\n    \"age\": 50,\r\n    \"balance\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "d969532020764e8f188aacedf4a6599e1a1e20ea",
+								"type": "text"
+							},
+							{
+								"key": "fiware-service",
+								"value": "Basic ZHRuOmR0bg==",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhcmx1bnR1eCIsImlkIjoiNjI0YjM4MWUyYWU1MmI4YWRkOTc3ZTc5IiwiaWF0IjoxNjQ5Njk2NjQxfQ.QLLwblxuwuCGJ5iHBIgJ835MJNpyksqqnnXxdZ2wYPY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\":\"8519736783\",\r\n    \"password\":\"A,12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "connections",
+			"item": [
+				{
+					"name": "Accept connection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50TnVtYmVyIjo4NTE5NzM2NzgzLCJmaXJzdE5hbWUiOiJQZXBlIiwibGFzdE5hbWUiOiJQZXJleiIsImlhdCI6MTY1NzM2MTc4OCwiZXhwIjoxNjU3MzY1Mzg4fQ.Ds17TItePmYa9_zEGKBSHdfDoXgM0hEVQSuEVjcTkrc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/connections/accept/62c956690b2802f671b41d78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"connections",
+								"accept",
+								"62c956690b2802f671b41d78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create connection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50TnVtYmVyIjo4NTE5NzM2NzgzLCJmaXJzdE5hbWUiOiJQZXBlIiwibGFzdE5hbWUiOiJQZXJleiIsImlhdCI6MTY1NzM2MTc4OCwiZXhwIjoxNjU3MzY1Mzg4fQ.Ds17TItePmYa9_zEGKBSHdfDoXgM0hEVQSuEVjcTkrc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"62c9551e35375bb27a3755fe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/connections/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"connections",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete connection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50TnVtYmVyIjo4NTc4Mjk0ODYxLCJmaXJzdE5hbWUiOiJDYXJsb3MiLCJsYXN0TmFtZSI6IlB1bWFyIiwiaWF0IjoxNjU3Mzc1NzY0LCJleHAiOjE2NTczNzkzNjR9.dKsmK18tG-RvE9Fezz0ZOtlcc9-5OcsmAgA25nUb9T8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/api/connections/62c9600cb802c291e3b788b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"connections",
+								"62c9600cb802c291e3b788b8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "Create transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50TnVtYmVyIjo4NTc4Mjk0ODYxLCJmaXJzdE5hbWUiOiJDYXJsb3MiLCJsYXN0TmFtZSI6IlB1bWFyIiwiaWF0IjoxNjU3MzY0NzY1LCJleHAiOjE2NTczNjgzNjV9.eKv7olhR6rjBVBUqvkulSKXcvm8Uq8MYl6O6VHg1Oho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": 8519736783,\r\n    \"value\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/transactions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"transactions",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
