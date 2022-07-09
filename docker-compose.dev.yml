@@ -7,4 +7,7 @@ services:
     ports:
       - '3002:3000'
     volumes:
-      - ./src:/app/src
+      - ./:/app
+      - ignore:/usr/local/apps/myapp/dev/node_modules/
+volumes:
+  ignore:
