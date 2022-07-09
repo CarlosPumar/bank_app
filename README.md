@@ -3,7 +3,7 @@
 - Create a route to create user:
 
   - User will provide there first name, last name, age and bank balance.
-    -You will create user in database will this information and create a 10 digit
+  - You will create user in database will this information and create a 10 digit
     random account number.
 
 - Users should only be able to make transactions or add connections only after
